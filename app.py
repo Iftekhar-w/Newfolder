@@ -13,7 +13,7 @@ import os
 
 from streamlit.type_util import BytesLike
 # genai.configure(api_key=os.environ["GEMINI_API_KEY"])
-
+os.environ["GEMINI_API_KEY"] == st.secrets["GEMINI_API_KEY"]
 
 def get_pdf_text(pdf_docs):
     text = ""
@@ -64,8 +64,8 @@ def handle_userinput(user_question):
 
 
 def main():
-    load_dotenv(find_dotenv())
-    os.getenv('GOOGLE_API_KEY')
+    # load_dotenv(find_dotenv())
+    # os.getenv('GOOGLE_API_KEY')
     st.set_page_config(page_title="Chat with multiple PDFs", page_icon=":books:")
     st.markdown(css, unsafe_allow_html=True)
 
