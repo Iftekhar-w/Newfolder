@@ -8,11 +8,11 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
 from langchain_google_genai import ChatGoogleGenerativeAI
-# import google.generativeai as genai
+import google.generativeai as genai
 import os
 
 from streamlit.type_util import BytesLike
-os.environ.get("GEMINI_API_KEY")
+genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
 
 def get_pdf_text(pdf_docs):
