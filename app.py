@@ -12,7 +12,7 @@ import google.generativeai as genai
 import os
 
 from streamlit.type_util import BytesLike
-genai.configure(api_key=os.environ.get["GEMINI_API_KEY"])
+genai.configure(api_key=os.environ.get("GEMINI_API_KEY"))
 
 
 def get_pdf_text(pdf_docs):
