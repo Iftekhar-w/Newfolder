@@ -8,6 +8,7 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
 from langchain_google_genai import ChatGoogleGenerativeAI
+import google.generativeai as genai
 import os
 
 from streamlit.type_util import BytesLike
