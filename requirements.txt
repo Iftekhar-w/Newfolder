@@ -5,5 +5,5 @@ streamlit==1.18.1
 altair==4
 tiktoken==0.4.0
 langchain-google-genai
-faiss-gpu
+faiss-cpu
 sentence-transformers
