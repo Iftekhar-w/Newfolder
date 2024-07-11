@@ -6,4 +6,3 @@ altair==4
 tiktoken==0.4.0
 langchain-google-genai
 faiss-cpu
-sentence-transformers
