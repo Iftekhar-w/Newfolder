@@ -5,5 +5,6 @@ streamlit
 altair
 tiktoken
 langchain-google-genai
-faiss-cpu
+faiss-gpu
 sentence-transformers
+wheel
