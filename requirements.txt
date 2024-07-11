@@ -1,4 +1,5 @@
 langchain-community
+langchain-huggingface
 PyPDF2
 python-dotenv
 streamlit
