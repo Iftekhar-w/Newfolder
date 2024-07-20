@@ -19,7 +19,7 @@ css = '''
   object-fit: cover;
 }
 .chat-message .message {
-  width: 110%;
+  width: 130%;
   padding: 0 1.5rem;
   color: #fff;
 }
