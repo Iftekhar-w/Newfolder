@@ -25,8 +25,8 @@ api_key=os.environ.get('GOOGLE_API_KEY')
 
 def get_pdf_text(pdf_docs):
     text = ""
-    for pdf in pdf_docs:
-        text += textract.process("pdf")
+    for document in pdf_docs:
+        text += textract.process("document")
     return text
 
 
