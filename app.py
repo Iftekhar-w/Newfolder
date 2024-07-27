@@ -26,7 +26,7 @@ api_key=os.environ.get('GOOGLE_API_KEY')
 def get_pdf_text(pdf_docs):
     text = ""
     for pdf in pdf_docs:
-        file_path = Path(pdf)
+        file_path = Path('pdf')
         file_extension = file_path.suffix
         if file_extension == '.pdf':
             pdf_reader = PdfReader(pdf)
