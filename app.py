@@ -18,15 +18,9 @@ api_key=os.environ.get('GOOGLE_API_KEY')
 def get_pdf_text(pdf_docs):
     text = ""
     for pdf in pdf_docs:
-        kind = filetype.guess(pdf)
-        if kind.extension == 'pdf':
-            pdf_reader = PdfReader(pdf)
-            for page in pdf_reader.pages:
-                text += page.extract_text()
-        elif kind.extension == 'odt':
-            with open('pdf', 'r') as file:
-                content = file.read()
-                text += content
+        pdf_reader = PdfReader(pdf)
+        for page in pdf_reader.pages:
+            text += page.extract_text()
     return text
 
 
