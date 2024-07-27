@@ -9,6 +9,7 @@ from langchain.chains import ConversationalRetrievalChain
 from htmlTemplates import css, bot_template, user_template
 from langchain_google_genai import ChatGoogleGenerativeAI
 import os
+from pathlib import Path
 
 from streamlit.type_util import BytesLike
 api_key=os.environ.get('GOOGLE_API_KEY')
@@ -25,8 +26,8 @@ api_key=os.environ.get('GOOGLE_API_KEY')
 def get_pdf_text(pdf_docs):
     text = ""
     for pdf in pdf_docs:
-        file_path = pdf
-        file_name, file_extension = os.path.splitext(file_path)
+        file_path = Path(pdf)
+        file_extension = file_path.suffix
         if file_extension == '.pdf':
             pdf_reader = PdfReader(pdf)
             for page in pdf_reader.pages:
