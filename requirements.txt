@@ -1,6 +1,6 @@
 langchain-community
 langchain-huggingface
-# PyPDF2
+PyPDF2
 python-dotenv
 streamlit
 altair
@@ -8,4 +8,3 @@ tiktoken
 langchain-google-genai
 faiss-cpu
 sentence-transformers
-textract
