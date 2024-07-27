@@ -1,6 +1,7 @@
 import streamlit as st
 from dotenv import load_dotenv
-from PyPDF2 import PdfReader
+# from PyPDF2 import PdfReader
+import textract
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
@@ -14,12 +15,18 @@ from streamlit.type_util import BytesLike
 api_key=os.environ.get('GOOGLE_API_KEY')
 
 
+# def get_pdf_text(pdf_docs):
+#     text = ""
+#     for pdf in pdf_docs:
+#         pdf_reader = PdfReader(pdf)
+#         for page in pdf_reader.pages:
+#             text += page.extract_text()
+#     return text
+
 def get_pdf_text(pdf_docs):
     text = ""
     for pdf in pdf_docs:
-        pdf_reader = PdfReader(pdf)
-        for page in pdf_reader.pages:
-            text += page.extract_text()
+        text += textract.process("pdf")
     return text
 
 
