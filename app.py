@@ -23,7 +23,7 @@ def get_pdf_text(pdf_docs):
             pdf_reader = PdfReader(pdf)
             for page in pdf_reader.pages:
                 text += page.extract_text()
-        elif kind.extension == 'txt':
+        elif kind.extension == 'odt':
             with open('pdf', 'r') as file:
                 content = file.read()
                 text += content
