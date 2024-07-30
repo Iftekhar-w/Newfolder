@@ -3,6 +3,7 @@ langchain-huggingface
 PyPDF2
 python-dotenv
 streamlit
+tiktoken
 altair
 langchain-google-genai
 faiss-cpu
