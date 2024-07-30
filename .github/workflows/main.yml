@@ -5,3 +5,8 @@ on:
 
 env: 
   google_api_key: ${{ secrets.GOOGLE_API_KEY }}
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+  
