@@ -9,4 +9,6 @@ env:
 jobs:
   run-python:
     runs-on: ubuntu-latest
-  
+    steps:
+      - name: Run Python Script
+        run: python app.py
