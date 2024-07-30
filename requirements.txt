@@ -4,5 +4,6 @@ PyPDF2
 python-dotenv
 streamlit
 altair
+tiktoken
 langchain-google-genai
 faiss-cpu
