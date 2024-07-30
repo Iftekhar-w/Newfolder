@@ -1,0 +1,17 @@
+name: My workflow
+
+on:
+  push:
+    branches: [ main ]
+
+env:
+  GOOGLE_API_KEY: ${{ vars.GOOGLE_API_KEY }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: |
+          echo "My variable: $GOOGLE_API_KEY"
