@@ -11,8 +11,8 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 import os
 
 from streamlit.type_util import BytesLike
-# api_key=st.secrets['GOOGLE_API_KEY']
-api_key=os.getenv('GOOGLE_API_KEY')
+api_key=st.secrets['GOOGLE_API_KEY']
+# api_key=os.getenv('GOOGLE_API_KEY')
 
 
 def get_pdf_text(pdf_docs):
