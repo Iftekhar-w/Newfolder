@@ -1,0 +1,7 @@
+name: Run Python Script
+
+on:
+  workflow_dispatch:
+
+env: 
+  google_api_key: ${{ secrets.GOOGLE_API_KEY }}
