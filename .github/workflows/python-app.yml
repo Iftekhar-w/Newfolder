@@ -20,4 +20,4 @@ jobs:
     steps:
       - name: Hello world action
         env: # Or as an environment variable
-          google_api_key: ${{ secrets.GOOGLE_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
