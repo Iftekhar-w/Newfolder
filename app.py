@@ -12,7 +12,6 @@ import os
 
 from streamlit.type_util import BytesLike
 # api_key=st.secrets['GOOGLE_API_KEY']
-api_key=os.getenv('API_KEY')
 
 
 def get_pdf_text(pdf_docs):
@@ -75,6 +74,7 @@ def handle_userinput(user_question):
 
 def main():
     load_dotenv()
+    api_key=os.getenv('GOOGLE_API_KEY')
     st.set_page_config(page_title="PDFChatGPT", page_icon=":books:")
     st.markdown(css, unsafe_allow_html=True)
 
