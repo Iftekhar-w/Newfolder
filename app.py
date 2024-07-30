@@ -12,7 +12,7 @@ import os
 
 from streamlit.type_util import BytesLike
 # api_key=st.secrets['GOOGLE_API_KEY']
-api_key=os.getenv('google_api_key')
+api_key=os.getenv('API_KEY')
 
 
 def get_pdf_text(pdf_docs):
